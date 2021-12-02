@@ -25,7 +25,6 @@ if(RUN_FROM_CONSOLE){
   DATA_DIR = "~/Dropbox (Dartmouth College)/qss20_finalproj_rawdata/summerwork"
 }
 
-
 setwd(DATA_DIR)
 
 ########################

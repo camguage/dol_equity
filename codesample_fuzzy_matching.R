@@ -662,7 +662,6 @@ cols_toadd = setdiff(colnames(job_groups_without_investigations_df), colnames(jo
  View(all_jobs_without_investigations %>%
         filter(jobs_group_id == id_2)) # we do
 
-
 # finally, combine all jobs with and without investigations
  final_df <- rbind.data.frame(all_jobs_with_investigations, all_jobs_without_investigations)
  

@@ -18,5 +18,5 @@ At a high-level, this script probabilistically matches entity names in H-2A appl
 2. **Read in the data**: Read in DOL H-2A data and WHD investigation data
 3. **Clean the data**: Apply the `find_status` and `clean_names` functions, filter to H-2A applications that have been at least partially certified
 4. **Deduplication**: Uses fastLink functionality to remove observations which have a repeated entry in the name column for both the H-2A application data and the WHD investigation data
-5. **Fuzzy Matching Driver**: Define `fuzzy_matching` function which returns a fuzzy-matched dataset for a given state. Then isolate the relevant states, loop through them applying `fuzzy_matching` to get the datasets for each state, and row-bind them together
+5. **Fuzzy Matching Driver**: Define `fuzzy_matching` function which returns a fuzzily-matched dataset for a given state. Then isolate the relevant states, loop through them applying `fuzzy_matching` to get the datasets for each state, and row-bind them together
 6. **Reduplication**: Carefully add back in the observations that were removed during deduplication, filling in the relevant columns if its copy had a match in the other dataset

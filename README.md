@@ -1,5 +1,5 @@
 # DOL Equity
-Scripts from Department of Labor (DOL) Summer Data Challenge on Equity and Underserved Communities (H-2A Oversight).
+Scripts from [Department of Labor (DOL) Summer Data Challenge on Equity and Underserved Communities](https://www.dol.gov/agencies/oasp/evaluation/currentstudies/Department-of-Labor-Summer-Data-Challenge) (H-2A Oversight).
 
 ---
 ## [descriptives_and_visualizations.R](https://github.com/camguage/dol_equity/blob/main/descriptives_and_visualizations.R)
@@ -13,4 +13,6 @@ For examples of visualizations that I created without collaboration, see my [dat
 This script reads in DOL H-2A data for each year from 2014 to 2021 and finds the column names present in every year. It also finds which columns are added each year (i.e., are not present in the prior year).
 
 ## [fuzzy_matching.R](https://github.com/camguage/dol_equity/blob/main/fuzzy_matching.R)
-At a high-level, this script probabilistically matches entity names in H-2A application data to those in DOL Wage and Hour Division (WHD) investigation data in order to see, out of the universe of H-2A employers, which have been investigated by the federal government. It does this in ___ steps
+At a high-level, this script probabilistically matches entity names in H-2A application data to those in DOL Wage and Hour Division (WHD) investigation data in order to see, out of the universe of H-2A employers, which have been investigated by the federal government. It does this in ___ steps:
+1. Define helper functions `find_status` and `clean_names` which we later apply to the datasets to put them to pull out relevant data and ease matching in fastLink.
+2. 

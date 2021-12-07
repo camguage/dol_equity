@@ -14,5 +14,9 @@ This script reads in DOL H-2A data for each year from 2014 to 2021 and finds the
 
 ## [fuzzy_matching.R](https://github.com/camguage/dol_equity/blob/main/fuzzy_matching.R)
 At a high-level, this script probabilistically matches entity names in H-2A application data to those in DOL Wage and Hour Division (WHD) investigation data in order to see, out of the universe of H-2A employers, which have been investigated by the federal government. It does this in ___ steps:
-1. Define helper functions `find_status` and `clean_names` which we later apply to the datasets to put them to pull out relevant data and ease matching in fastLink.
-2. 
+1. **Define helper functions**: `find_status` and `clean_names` are later applied to the datasets to pull out relevant data and ease matching in fastLink. `generate_save_matches` and `merge_matches` are later called in the driver function for fuzzy matching
+2. **Read in the data**: Read in DOL H-2A data and WHD investigation data
+3. **Clean the data**: Apply the `find_status` and `clean_names` functions
+4. **Deduplication**: Uses fastLink functionality to remove observations which have a repeated entry in the name column for both the H-2A application data and the WHD investigation data
+5. **Fuzzy Matching Driver**: Define `fuzzy_matching` function which returns a fuzzy-matched dataset for a given state. Then isolate the relevant states, loop through them applying `fuzzy_matching` to get the datasets for each state, and then row-bind them together
+6. **Reduplication**

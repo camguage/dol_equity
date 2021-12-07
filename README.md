@@ -9,4 +9,8 @@ This was created in collaboration with [@rebeccajohnson88](https://github.com/re
 
 For examples of visualizations that I created without collaboration, see my [data_viz repo](https://github.com/camguage/data_viz).
 
-___
+## [disclosure_diff_fields.py](https://github.com/camguage/dol_equity/blob/main/disclosure_diff_fields.py)
+This script reads in DOL H-2A data for each year from 2014 to 2021 and finds the column names present in every year. It also finds which columns are added each year (i.e., are not present in the prior year).
+
+## [fuzzy_matching.R](https://github.com/camguage/dol_equity/blob/main/fuzzy_matching.R)
+At a high-level, this script probabilistically matches entity names in H-2A application data to those in DOL Wage and Hour Division (WHD) investigation data in order to see, out of the universe of H-2A employers, which have been investigated by the federal government. It does this in ___ steps

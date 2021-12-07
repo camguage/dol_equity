@@ -209,7 +209,7 @@ test <- approved_deduped_clean %>%
 table(test$is_same_state) # looks like we have some jobs that span multiple states
 
 # Thus, adjust the jobs_group_id so that each combination of jobs_group_id and state maps to a unique index
-# First create a part 2 of the index that will correspond to the state within a particular jobss_group_id
+# First create a part 2 of the index that will correspond to the state within a particular jobs_group_id
 approved_deduped_clean <- approved_deduped_clean %>%
   group_by(jobs_group_id) %>%
   mutate(jobs_group_id_part2 = as.integer(factor(state_formatch))) %>%
